@@ -1,0 +1,36 @@
+ALGORITHM algorithm_name
+VAR
+    vcount:INTEGER := 0;// vowel count
+    wcount:INTEGER := 0;// words count
+    carac_count:INTEGER:=0;//charrectt count
+    vcount:INTEGER := 0;// vowel count
+    j:INTEGER //phrase counter
+    str:STRING :="This is a full phrase";
+
+BEGIN
+    Read(str)
+    str:=str.lowercase();
+    
+    //number of characters and words
+    
+    SWITCH (str.charAt[j]) DO
+        case ' ' : wcount := ++;
+        default : carac_count:= ++;BREAK;
+    END_SWITCH
+    //number of vowels
+    FOR i FROM 0 TO str.length STEP step  DO
+        IF (str[i]=="a" || str[i]=="e" ||str[i]=="i" || str[i]=="o" ||str[i]=="u") THEN
+            vcount := ++;
+        ELSE
+            Write("it is not a vowel")
+        END_IF
+        
+    END_FOR
+    Write(vcount)
+    Write(wcount)
+    Write(carac_count)
+
+
+
+
+END
