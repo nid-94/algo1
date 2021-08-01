@@ -2,7 +2,7 @@ ALGORITHM phrase-work
 VAR
     Vcount,Wcount,carac_count:INTEGER ;
     j:INTEGER //phrase counter
-    Mystr:STRING :="This is a full phrase.";
+    Mystr:STRING ;
 //Vcount= vowel count
 //Wcount = words count
 //cara_count=charrectt count
@@ -18,11 +18,12 @@ BEGIN
     
     FOR j FROM 0 TO Mystr.length STEP step  DO
     //number of characters and words
-        if (str[j] = ' ')
+        IF (str[j] = ' ') THEN
             Wcount++;
-        if else(str[j] = '.')
+        ELSE_IF(str[j] = '.') THEN
             Write("end of the sentence");
         carac_count++;
+        END_IF
     //number of vowels
         IF (str[i]=="a" or str[i]=="e"  or str[i]=="i" or str[i]=="o" or str[i]=="u") THEN
             Vcount++;
