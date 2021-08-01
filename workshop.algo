@@ -2,20 +2,21 @@ ALGORITHM phrase-work
 VAR
     Vcount,Wcount,carac_count:INTEGER ;
     j:INTEGER //phrase counter
-    Myst:STRING :="This is a full phrase.";
+    Mystr:STRING :="This is a full phrase.";
 //Vcount= vowel count
 //Wcount = words count
 //cara_count=charrectt count
-//Vcount= vowel count
+
     
 
 BEGIN
+    Vcount=Wcount=carac_count=0;
     Write("enter a phrase")
-    Read(str)
-    str:=str.lowercase();
+    Read(Mystr)
+    Mystr:=Mystr.lowercase();
     
     
-    FOR j FROM 0 TO str.length STEP step  DO
+    FOR j FROM 0 TO Mystr.length STEP step  DO
     //number of characters and words
         if (str[j] = ' ')
             Wcount++;
