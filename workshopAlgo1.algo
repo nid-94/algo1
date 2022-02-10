@@ -1,0 +1,38 @@
+ALGORITHM phrase-work
+VAR
+    Vcount,Wcount,carac_count:INTEGER ;
+    j:INTEGER //phrase counter
+    str:STRING;
+//Vcount= vowel count
+//Wcount = words count
+//cara_count=charrectt count
+//Vcount= vowel count
+    
+
+BEGIN
+    str:=Write("enter a phrase.")
+    // str := "Bonjour je suis devellopeur Full Stack JS"
+    Read(str)
+    str:=str.lowercase();
+    Wcount=1; 
+    
+
+    FOR j FROM 0 TO str.length STEP step  DO
+    //number of characters and words
+        carac_count++; // number of caracter +1
+
+        if (str[j] = ' ') THEN
+            Wcount++; // number of words +1
+        END_IF
+    
+        
+    //number of vowels
+        IF (str[j]=="a" or str[j]=="e"  or str[j]=="i" or str[j]=="o" or str[j]=="u") THEN
+            Vcount++; // number of voyels +1
+        END_IF
+    END_FOR
+
+    Write(Vcount)
+    Write(Wcount)
+    Write(carac_count)
+END
